@@ -8,15 +8,19 @@ public class SchoolBus
     public static void main(String[] args)
     {
         final int BUS_STEP = 10;
-        final int SLEEP = 300;
+        final int SLEEP = 200;
         final int STEPS = 50;
         DrawingPanel panel = new DrawingPanel(300,100);
         panel.setBackground(Color.LIGHT_GRAY);
         Graphics2D g = panel.getGraphics();
-
-        for (int x = 0; x < STEPS; x++) {
+        int x = 0;
+        while(true) {
+        	x+=BUS_STEP;
+        	if (x > panel.getWidth()) {
+        		x = 0;
+        	}
         	panel.clear();
-        	drawBusAt(x*BUS_STEP,g);
+        	drawBusAt(x,g);
         	panel.sleep(SLEEP);
         }
     }
