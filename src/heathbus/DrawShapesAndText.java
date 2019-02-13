@@ -1,3 +1,4 @@
+package heathbus;
 // Draws a variety of shapes to demonstrate some of the 
 // methods in the Graphics2D object.
 
